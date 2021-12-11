@@ -10,7 +10,24 @@
 
 1. Download DIV2K training data (800 training + 100 validtion images) from [DIV2K dataset](https://data.vision.ee.ethz.ch/cvl/DIV2K/) or [SNU_CVLab](https://cv.snu.ac.kr/research/EDSR/DIV2K.tar).
 
-2. Specify '--dir_data' as the HR and LR image path.
+2. Place the dataset as the following directory structure:
+   ```
+   -dataset
+    -DIV2K
+      -DIV2K_train_HR
+      -DIV2K_train_LR_bicubic
+      -DIV2K_train_DNRGB
+      -DIV2K_train_Mosaic
+    -benchmark
+      -Urban100
+        -HR
+        -LR_bicubic
+        -DN-RGB
+        -Mosaic
+      -Set5
+        ...
+   ```
+3. Specify '--dir_data' as the HR and LR image path.
 
 ### Train the model
 You can retrain the model:
@@ -52,7 +69,7 @@ You can retrain the model:
 
 
 ## Results
-Some of the test results can be [downloaded]().
+Some of the test results can be [downloaded](https://drive.google.com/drive/folders/13dirpQ6a68FsVLSBj9L3tMWvIlkVAK7Z?usp=sharing).
 
 ## Citation
 If the the work or the code is helpful, please cite the following papers
